@@ -1,0 +1,42 @@
+.toppagewrapper {
+  background-image: url('toppage.png');
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.maintitle {
+  font-size: 100px;
+  text-align: center;
+  color: #FFF;
+}
+
+.subtitle {
+  font-size: 30px;
+  text-align: center;
+  color: #FFF;
+}
+
+.devisebtn{
+  background-color: #00F;
+  color: #FFF;
+  margin: 15px;
+}
+
+.acountbtn {
+  text-align: center;
+}
+
+.signup-login-page-wrapper {
+  background-color: #3399FF;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.etc-btn {
+  text-align: center;
+}
