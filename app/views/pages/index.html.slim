@@ -4,9 +4,10 @@
   
   nav.acountbtn
     -if user_signed_in?
-      =link_to 'current_user.username', pages_show_path, class: "btn devisebtn"
+      =link_to 'ユーザーメインページ', page_path(current_user), method: :get, class: "btn devisebtn"
       =link_to 'プロフィール変更', edit_user_registration_path, class: "btn devisebtn"
-      =link_to 'ログアウト', destroy_user_session_path, method: :delite, class: "btn devisebtn"
+      =link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn devisebtn"
     -else
       =link_to 'サインアップ',new_user_registration_path, class: "btn devisebtn"
       =link_to 'ログイン',new_user_session_path, class: "btn devisebtn"
+      

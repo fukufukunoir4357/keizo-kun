@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  leaning_site: one
+  select_course: one
+  curriculum: one
+
+two:
+  user: two
+  leaning_site: two
+  select_course: two
+  curriculum: two

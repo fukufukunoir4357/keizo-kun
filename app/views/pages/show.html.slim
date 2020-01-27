@@ -1,2 +1,6 @@
-h1 Pages#show
-p Find me in app/views/pages/show.html.slim
+.userpage-wrapper
+    h1 ユーザーページです
+    p 登録email
+    =current_user.email
+    =check_box_tag :test1
+    =label_tag :test1, "test"

@@ -3,5 +3,7 @@ class PagesController < ApplicationController
   end
 
   def show
+    @user = current_user
+    pages_path(id: @user.id)
   end
 end

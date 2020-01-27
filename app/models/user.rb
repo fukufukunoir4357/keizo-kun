@@ -3,7 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
+         :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
+         
+  has_many :leaning_sites
+  has_many :select_courses
+  has_many :curriculums
          
   def self.from_omniauth(auth)
         where(provider: auth["provider"], uid: auth["uid"]).first_or_create do |user|
