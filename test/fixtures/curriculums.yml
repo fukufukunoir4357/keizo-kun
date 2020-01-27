@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  course_id: one
+  course: one
   content: MyString
 
 two:
-  course_id: two
+  course: two
   content: MyString

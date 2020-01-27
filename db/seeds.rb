@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ Site.create(name: 'ドットインストール', adress: 'https://dotinstall.com/')
+ Site.create(name: 'Progate', adress: 'https://prog-8.com/')

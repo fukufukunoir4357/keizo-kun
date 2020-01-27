@@ -2,12 +2,12 @@
 
 one:
   user: one
-  leaning_site: one
-  select_course: one
+  site: one
+  course: one
   curriculum: one
 
 two:
   user: two
-  leaning_site: two
-  select_course: two
+  site: two
+  course: two
   curriculum: two
