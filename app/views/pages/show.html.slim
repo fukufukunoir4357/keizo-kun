@@ -1,6 +1,33 @@
 .userpage-wrapper
     h1 ユーザーページです
-    p 登録email
-    =current_user.email
     =check_box_tag :test1
     =label_tag :test1, "test"
+    
+    
+    
+    
+    =form_for(@favorite, url: user_favorites_path(:current_user_id)) do |f|
+     .site-area
+     = f.label :site_id
+     = f.collection_select :site_id, Site.all, :id, :name, class: "site-choice", name: 'site-selector'
+     
+     .course-area
+     = f.label :course_id
+     = f.collection_select :course_id, Course.all, :id, :name, class: "course-choice", name: "course-selector"
+     
+     .submit-area
+     =f.submit "登録"
+    
+    
+    h1.site_select 学習に使用しているサイトを選択してください
+    
+    = form_for @favorite, url: user_favorites_path(:current_user_id) do |c|
+     = c.collection_check_boxes(:site_id, Site.all, :id, :name) do |d|
+      = d.label { d.check_box + d.text}
+     = c.submit "登録", class:"btn site_select_btn"
+    
+    h2.course_select 学習している言語を選択してください 
+    = form_for @favorite, url: user_favorites_path(:current_user_id) do |e|
+     = e.collection_check_boxes(:course_id, Course.all, :id, :name) do |g|
+      = g.label { g.check_box + g.text}
+     = e.submit "登録", class:"btn curse_select_btn"

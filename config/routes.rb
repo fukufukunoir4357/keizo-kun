@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'pages#index'
   resources :pages
   
-  
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions',
@@ -16,9 +15,12 @@ Rails.application.routes.draw do
   end
   
   resources :users
-  resources :leaning_sites
-  resources :select_courses
-  resources :curriculums
+  resources :sites do
+    resources :courses
+  end
   
+  resources :users do
+  resources :favorites
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

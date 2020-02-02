@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
  Site.create(name: 'ドットインストール', adress: 'https://dotinstall.com/')
  Site.create(name: 'Progate', adress: 'https://prog-8.com/')
+ Course.create(name: 'HTML', site_id: '1')
+ Course.create(name: 'Ruby', site_id: '1')
+ Course.create(name: 'HTML', site_id: '2')
+ Course.create(name: 'Ruby', site_id: '2')

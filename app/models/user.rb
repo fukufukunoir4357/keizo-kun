@@ -5,9 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
          
-  has_many :leaning_sites
-  has_many :select_courses
-  has_many :curriculums
+  has_many :favorites
+  has_many :sites, through: :favorites
+  has_many :courses, through: :favorites
+  has_many :curriculums, through: :favorites
          
   def self.from_omniauth(auth)
         where(provider: auth["provider"], uid: auth["uid"]).first_or_create do |user|
